@@ -7,13 +7,10 @@
     --primary-text-color: #fff;
     --secondary-text-color: #f07d07;
     --disabled-text-color: #bebebe;
-}
+    --background-activated: #fff;
 
-
-:root.md,
-:root.ios {
     --ion-toolbar-background: var(--header-color);
     --ion-background-color: var(--background-color);
     --ion-text-color: var(--primary-text-color);
-    ----ion-color-primary: #fff;
+    --ion-color-primary: #fff;
 }

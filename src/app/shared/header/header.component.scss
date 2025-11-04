@@ -1,10 +1,17 @@
 :host{
     ion-header{
         ion-toolbar{
-            padding-top: 0.5rem;
             ion-menu-button::part(native){
                 font-size: 32px;
                 color: #fff;
+            }
+
+            ion-button{
+                &::part(native){
+                    &::after{
+                        background: #0000001f;
+                    }
+                }
             }
 
             ion-button::part(native){

@@ -1,0 +1,36 @@
+@import 'swiper/css';
+
+:host{
+  padding: 0px 35px;
+}
+
+swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      div{
+        img{
+            border-radius: 15px;
+            filter: grayscale(1);
+        }
+      }
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    swiper-slide {
+      width: 200px;
+    }
