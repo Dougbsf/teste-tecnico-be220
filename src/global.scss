@@ -32,6 +32,26 @@
  * https://ionicframework.com/docs/theming/dark-mode
  */
 
-/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+ @import "@ionic/angular/css/palettes/dark.always.css";
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+// @import '@ionic/angular/css/palettes/dark.system.css';
+
+
+@font-face {
+  font-family: 'AlternateGothic';
+  src: url('./assets/fonts/AlternateGotNo1D.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AlternateGothic';
+  src: url('./assets/fonts/AlternateGotNo3D.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+// Aplicar a fonte globalmente
+* {
+  font-family: 'AlternateGothic', sans-serif;
+}

@@ -1,2 +1,19 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+:root {
+    --header-color: #202020;
+    --background-color: #000;
+
+    --primary-text-color: #fff;
+    --secondary-text-color: #f07d07;
+    --disabled-text-color: #bebebe;
+}
+
+
+:root.md,
+:root.ios {
+    --ion-toolbar-background: var(--header-color);
+    --ion-background-color: var(--background-color);
+    --ion-text-color: var(--primary-text-color);
+    ----ion-color-primary: #fff;
+}

@@ -1,0 +1,33 @@
+<ion-content [fullscreen]="false">
+  <div class="profile-box">
+
+    <div class="user-data">
+      <ion-img src="assets/images/user.png" alt="User Avatar" class="avatar"></ion-img>
+      <div class="user-info">
+        <p class="user-name">{{currentUser.name}}</p>
+        <p [classList]="'plan ' + getPlan(currentUser.plan).color">{{getPlan(currentUser.plan).name}}</p>
+      </div>
+    </div>
+
+    <div class="quick-shortcuts">
+      <button>
+        <div class="circle">
+          <ion-icon name="body" slot="start"></ion-icon>
+        </div>
+        MEU CORPO
+      </button>
+      <button>
+        <div class="circle">
+          <ion-icon name="trophy" slot="end"></ion-icon>
+        </div>
+          OBJETIVOS E CONQUISTAS
+      </button>
+    </div>
+
+  </div>
+
+  <div class="home-components">
+    <app-online-personal-trainer-list/>
+    <app-training-programs-list/>
+  </div>
+</ion-content>
