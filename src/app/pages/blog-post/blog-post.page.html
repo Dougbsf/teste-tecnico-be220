@@ -1,0 +1,21 @@
+<ion-content forceOverscroll="false" [fullscreen]="true">
+  <div class="blog-post-container">
+    <!-- Header com botão voltar -->
+    <div class="blog-header">
+      <button class="back-button" (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+      <h1 class="blog-title">{{ post()?.title }}</h1>
+    </div>
+
+    <!-- Foto do post -->
+    <div class="blog-image">
+      <ion-img [src]="post()?.photo_url" alt="Blog post image"></ion-img>
+    </div>
+
+    <!-- Descrição do post -->
+    <div class="blog-content">
+      <p class="blog-description">{{ post()?.description }}</p>
+    </div>
+  </div>
+</ion-content>

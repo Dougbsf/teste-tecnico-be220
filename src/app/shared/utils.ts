@@ -6,8 +6,8 @@ import { AlertController } from '@ionic/angular';
 export class Utils {
     constructor(private router: Router, private alertCtrl: AlertController) { }
 
-    redirectTo(path: string) {
-        this.router.navigate(['/' + path]);
+    redirectTo(path: string, data: any = null) {
+        this.router.navigate(['/' + path], data);
     }
 
     async callAlert(header: string, message?: string) {

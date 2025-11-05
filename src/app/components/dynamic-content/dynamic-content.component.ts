@@ -37,7 +37,7 @@ export class DynamicContentComponent {
       this.slideList.push({
         slideImgPath: item.photo_url,
         slideLabel: item.title,
-        action: () => { }
+        action: () => this.utils.redirectTo('blog-post', { state: item })
       })
     });
   }
