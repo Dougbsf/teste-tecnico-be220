@@ -1,0 +1,44 @@
+  <div class="slider-header">
+    <h1 class="slider-title">{{title}}</h1>
+
+    @if(newBadge){
+      <span class="badge">
+        <label>NOVO</label>
+      </span>
+    }
+
+    @if(newActionButton){
+      <div class="orange-circle" (click)="callNewActionButtonFunction()">
+        <ion-icon name="add-outline" slot="start"></ion-icon>
+      </div>
+    }
+  </div>
+  <swiper-container
+      slides-per-view="auto"
+      space-between="15"
+    >
+    @for(slide of slides; track slide){
+      <swiper-slide>
+        <div class="slide-ctn" (click)="callSlideAction(slide)">
+          @if(slide.overlayLabel){
+            <div class="slide-overlay">
+              <div class="center">
+                <div class="circle">
+                  <ion-icon [name]="slide?.overlayIcon" slot="start"></ion-icon>
+                </div>
+                <label>{{slide.slideLabel}}</label>
+              </div>
+            </div>
+            <img [src]="slide.slideImgPath"/>
+          }
+          @else {
+            @if(slide.lastTrained){
+              <label class="over-orange">continuar treinando</label>
+            }
+            <label class="lower">{{slide.slideLabel}}</label>
+            <img [src]="slide.slideImgPath"/>
+          }
+        </div>
+      </swiper-slide>
+    }
+    </swiper-container>

@@ -51,6 +51,27 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Mono45';
+  src: url('./assets/fonts/Mono45Headline-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mono45';
+  src: url('./assets/fonts/Mono45Headline-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mono45';
+  src: url('./assets/fonts/Mono45Headline-Light.ttf') format('truetype');
+  font-weight: lighter;
+  font-style: normal;
+}
+
 // Aplicar a fonte globalmente
 * {
   font-family: 'AlternateGothic', sans-serif;

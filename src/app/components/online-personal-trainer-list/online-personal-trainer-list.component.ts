@@ -1,24 +1,36 @@
-import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { register } from 'swiper/element/bundle';
-import { Swiper } from 'swiper/types';
+import { Component, } from '@angular/core';
+import { ISlide } from 'src/app/shared/slider/interfaces/slideInterface';
+import { SliderComponent } from "src/app/shared/slider/slider.component";
+import { Utils } from 'src/app/shared/utils';
+import { addOutline } from 'ionicons/icons';
 
-register();
 @Component({
   selector: 'app-online-personal-trainer-list',
   templateUrl: './online-personal-trainer-list.component.html',
   styleUrls: ['./online-personal-trainer-list.component.scss'],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  imports: [SliderComponent]
 })
 export class OnlinePersonalTrainerListComponent {
- spaceBetween = 10;
 
-  onProgress(event: CustomEvent<[Swiper, number]>) {
-    const [swiper, progress] = event.detail;
-    console.log(progress);
-  }
+  constructor(private utils: Utils){}
+ 
+  slideList: ISlide[] = [
+    {
+      slideLabel: 'Novo Treino',
+      slideImgPath: './assets/images/academia1.png',
+      action: () => this.utils.redirectTo('/about'),
+      overlayLabel: true,
+      overlayIcon: 'add-outline',
+    },
+    {
+      slideLabel: 'YOGA EXPRESS',
+      slideImgPath: './assets/images/academia2.png',
+      action: () => this.utils.callAlert('OLA', 'poladoful')
+    }
+  ]
 
-  onSlideChange() {
-    console.log('slide changed');
-  }
+  sliderTitle = 'PERSONAL ONLINE';
 
+  newTraining =() => { this.utils.callAlert('Personal Online', 'vamos iniciar o treinamento')};
+  
 }

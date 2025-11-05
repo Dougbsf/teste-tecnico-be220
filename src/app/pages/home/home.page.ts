@@ -16,7 +16,7 @@ import { TrainingProgramsListComponent } from "src/app/components/training-progr
 })
 export class HomePage implements OnInit {
   currentUser = {
-    name: 'Douglas Brito',
+    name: 'Leonardo Santos',
     plan: 'purple',
   }
 

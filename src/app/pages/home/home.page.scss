@@ -1,30 +1,31 @@
-
-.profile-box{
+.profile-box {
     width: 100%;
     display: flex;
-    background-color: #202020;
+    background-color: var(--header-color);
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
     border-bottom-left-radius: 45px;
     border-bottom-right-radius: 45px;
-    padding-top: 5px;
+    padding-top: 10px;
 
-    .user-data{
+    .user-data {
         width: 80%;
         display: flex;
         flex-direction: row;
         margin-bottom: 10px;
-        .avatar{
+
+        .avatar {
             width: 64px;
             height: 64px;
-            &::part(image){
+
+            &::part(image) {
                 border-radius: 50%;
             }
         }
 
-        p{
+        p {
             margin: 0;
         }
 
@@ -34,34 +35,43 @@
             flex-direction: column;
             margin-left: 10px;
 
-            .plan{
-                &.grey{
+            .user-name{
+                font-size: 24px;
+            }
+
+            .plan {
+                font-size: 16px;
+
+                &.grey {
                     color: grey;
                 }
-                &.blue{
+
+                &.blue {
                     color: blue;
                 }
-                &.gold{
+
+                &.gold {
                     color: gold;
                 }
-                &.purple{
-                    color: purple;
+
+                &.purple {
+                    color: #6a36e8;
                 }
             }
         }
     }
 
-    .quick-shortcuts{
+    .quick-shortcuts {
         padding: 5px 15px;
         display: flex;
         gap: 10px;
         background: #151515;
         border-radius: 32px;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         align-items: center;
         justify-content: center;
 
-        button{
+        button {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -70,7 +80,8 @@
             background: #151515;
             font-size: 14px;
         }
-        .circle{
+
+        .circle {
             border: solid 1px var(--secondary-text-color);
             border-radius: 50%;
             // width: 15px;
@@ -79,4 +90,8 @@
             font-size: 8px;
         }
     }
+}
+
+.home-components {
+    margin-top: 35px;
 }
