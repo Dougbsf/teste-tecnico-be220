@@ -103,6 +103,7 @@ swiper-slide {
         z-index: 1;
         font-size: 24px;
         text-shadow: 0px 0px 4px #000000;
+        text-transform: uppercase;
     }
 
     label.over-orange {
@@ -117,6 +118,7 @@ swiper-slide {
         z-index: 1;
         font-size: 14px;
         text-shadow: 0 0 4px #000000;
+        text-transform: uppercase;
     }
 
     .slide-overlay {
@@ -154,6 +156,7 @@ swiper-slide {
                 text-align: left;
                 line-height: 21px;
                 font-weight: 300;
+                text-transform: uppercase;
             }
         }
     }
