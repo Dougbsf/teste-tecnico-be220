@@ -8,7 +8,7 @@
     gap: 10px;
     border-bottom-left-radius: 45px;
     border-bottom-right-radius: 45px;
-    padding-top: 10px;
+    padding-top: 20px;
 
     .user-data {
         width: 80%;
@@ -36,11 +36,12 @@
             margin-left: 10px;
 
             .user-name{
-                font-size: 24px;
+                font-size: 18px;
             }
 
             .plan {
-                font-size: 16px;
+                font-size: 12px;
+                font-weight: 200;
 
                 &.grey {
                     color: grey;
@@ -55,7 +56,7 @@
                 }
 
                 &.purple {
-                    color: #6a36e8;
+                    color: #7b51e3;
                 }
             }
         }
@@ -70,7 +71,8 @@
         margin-bottom: 15px;
         align-items: center;
         justify-content: center;
-
+        box-shadow: 0px 0px 2px 0px black;
+        
         button {
             display: flex;
             align-items: center;
@@ -78,7 +80,8 @@
             gap: 3px;
             color: var(--secondary-text-color);
             background: #151515;
-            font-size: 14px;
+            font-size: 11px;
+            font-weight: 100;
         }
 
         .circle {

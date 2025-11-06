@@ -1,6 +1,7 @@
 :host{
     ion-header{
         ion-toolbar{
+            padding-top: 10px;
             ion-menu-button::part(native){
                 font-size: 32px;
                 color: #fff;
