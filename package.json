@@ -7,7 +7,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build && npm run postbuild",
-    "postbuild": "copyfiles -u 0 www/** dist/app/",
+    "postbuild": "node scripts/copy-www.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint"
