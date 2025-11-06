@@ -6,9 +6,12 @@ import { AlertController } from '@ionic/angular';
 export class Utils {
     constructor(private router: Router, private alertCtrl: AlertController) { }
 
-    redirectTo(path: string, queryParams: any = null) {
-        const navigationExtras = queryParams ? { queryParams } : undefined;
-        this.router.navigate([path], navigationExtras);
+    redirectTo(path: string, options: any = null) {
+        if (options) {
+            this.router.navigate([path], options);
+        } else {
+            this.router.navigate([path]);
+        }
     }
 
     async callAlert(header: string, message?: string) {
