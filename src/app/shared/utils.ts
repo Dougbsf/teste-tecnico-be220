@@ -6,16 +6,22 @@ import { AlertController } from '@ionic/angular';
 export class Utils {
     constructor(private router: Router, private alertCtrl: AlertController) { }
 
-    redirectTo(path: string, data: any = null) {
-        this.router.navigate(['/' + path], data);
+    redirectTo(path: string, queryParams: any = null) {
+        const navigationExtras = queryParams ? { queryParams } : undefined;
+        this.router.navigate([path], navigationExtras);
     }
 
     async callAlert(header: string, message?: string) {
-        const alert = await this.alertCtrl.create({
-            header,
-            message: message ?? '',
-            buttons: ['OK']
-        });
-        await alert.present();
+        try {
+            const alert = await this.alertCtrl.create({
+                header,
+                message: message ?? '',
+                buttons: ['OK']
+            });
+            await alert.present();
+        } catch (error) {
+            const fullMessage = message ? `${header}\n\n${message}` : header;
+            window.alert(fullMessage);
+        }
     }
 }
