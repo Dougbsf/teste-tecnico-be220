@@ -8,3 +8,10 @@
 4. Desenvolver o mais próximo à tela, prestar atenção nos detalhes;
 5. Utilizar as tecnologias almejadas: Ionic, Angular e Firebase.
 
+## O que foi feito
+
+- Design o mais próximo possível da referência
+- Integração com firebase (Firestore e Storage para dados dos slides)
+- Deploy para o Firebase Hosting
+
+Url ativa: https://teste-be220-ed8b8.web.app/home

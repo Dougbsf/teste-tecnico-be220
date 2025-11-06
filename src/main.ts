@@ -9,8 +9,6 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getMessaging, provideMessaging } from '@angular/fire/messaging';
 import { getStorage, provideStorage } from '@angular/fire/storage';
-import { isDevMode } from '@angular/core';
-import { provideServiceWorker } from '@angular/service-worker';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -28,9 +26,6 @@ bootstrapApplication(AppComponent, {
     provideAuth(() => getAuth()), 
     provideFirestore(() => getFirestore()), 
     provideMessaging(() => getMessaging()), 
-    provideStorage(() => getStorage()), provideServiceWorker('ngsw-worker.js', {
-            enabled: !isDevMode(),
-            registrationStrategy: 'registerWhenStable:30000'
-          }),
+    provideStorage(() => getStorage()), 
   ],
 });
